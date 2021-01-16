@@ -68,12 +68,16 @@ function _nonIterableRest() {
   computed: {
     changedBy: function changedBy() {
       var message = this.message;
-      if (!message.action) return 'initialized'; //return `${message?.action} ${message.amount ?? ''}`.trim();
-
-      return 'faycal is fayçal';
+      if (!message.action) return 'initialized';
+      return this.setMessage(); //return 'faycal is fayçal';
     }
   },
   methods: {
+    setMessage: function setMessage() {
+      var _message, _message$amount;
+
+      return "".concat((_message = message) === null || _message === void 0 ? void 0 : _message.action, " ").concat((_message$amount = message.amount) !== null && _message$amount !== void 0 ? _message$amount : '').trim();
+    },
     increment: function increment(arg) {
       var amount = typeof arg !== 'number' ? 1 : arg;
       this.counter += amount;
@@ -218,7 +222,7 @@ var __vue_render__ = function __vue_render__() {
 
   return _c('div', {
     staticClass: "w3c-vue-sample w3-panel w3-red"
-  }, [_vm._ssrNode("<p data-v-668b1986>" + _vm._ssrEscape("The counter was " + _vm._s(_vm.changedBy) + " to ") + "<b data-v-668b1986>" + _vm._ssrEscape(_vm._s(_vm.counter)) + "</b>.</p> <button data-v-668b1986>\n    Click +1\n  </button> <button data-v-668b1986>\n    Click -1\n  </button> <button data-v-668b1986>\n    Click +5\n  </button> <button data-v-668b1986>\n    Click -5\n  </button> <button data-v-668b1986>\n    Reset\n  </button>")]);
+  }, [_vm._ssrNode("<p data-v-2745d7a6>" + _vm._ssrEscape("The counter was " + _vm._s(_vm.changedBy) + " to ") + "<b data-v-2745d7a6>" + _vm._ssrEscape(_vm._s(_vm.counter)) + "</b>.</p> <button class=\"w3-button w3-yellow\" data-v-2745d7a6>\n    Click +1\n  </button> <button class=\"w3-button w3-yellow\" data-v-2745d7a6>\n    Click -1\n  </button> <button class=\"w3-button w3-yellow\" data-v-2745d7a6>\n    Click +5\n  </button> <button class=\"w3-button w3-yellow\" data-v-2745d7a6>\n    Click -5\n  </button> <button class=\"w3-button w3-yellow\" data-v-2745d7a6>\n    Reset\n  </button>")]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -226,8 +230,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-668b1986_0", {
-    source: ".w3c-vue-sample[data-v-668b1986]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-668b1986]{margin:0 0 1em}",
+  inject("data-v-2745d7a6_0", {
+    source: ".w3c-vue-sample[data-v-2745d7a6]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-2745d7a6]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -235,10 +239,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-668b1986";
+var __vue_scope_id__ = "data-v-2745d7a6";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-668b1986";
+var __vue_module_identifier__ = "data-v-2745d7a6";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

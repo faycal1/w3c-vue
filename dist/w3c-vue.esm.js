@@ -18,13 +18,16 @@ var script = {
       const {
         message
       } = this;
-      if (!message.action) return 'initialized'; //return `${message?.action} ${message.amount ?? ''}`.trim();
-
-      return 'faycal is fayçal';
+      if (!message.action) return 'initialized';
+      return this.setMessage(); //return 'faycal is fayçal';
     }
 
   },
   methods: {
+    setMessage() {
+      return `${message?.action} ${message.amount ?? ''}`.trim();
+    },
+
     increment(arg) {
       const amount = typeof arg !== 'number' ? 1 : arg;
       this.counter += amount;
@@ -190,26 +193,31 @@ var __vue_render__ = function () {
   return _c('div', {
     staticClass: "w3c-vue-sample w3-panel w3-red"
   }, [_c('p', [_vm._v("The counter was " + _vm._s(_vm.changedBy) + " to "), _c('b', [_vm._v(_vm._s(_vm.counter))]), _vm._v(".")]), _vm._v(" "), _c('button', {
+    staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.increment
     }
   }, [_vm._v("\n    Click +1\n  ")]), _vm._v(" "), _c('button', {
+    staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.decrement
     }
   }, [_vm._v("\n    Click -1\n  ")]), _vm._v(" "), _c('button', {
+    staticClass: "w3-button w3-yellow",
     on: {
       "click": function ($event) {
         return _vm.increment(5);
       }
     }
   }, [_vm._v("\n    Click +5\n  ")]), _vm._v(" "), _c('button', {
+    staticClass: "w3-button w3-yellow",
     on: {
       "click": function ($event) {
         return _vm.decrement(5);
       }
     }
   }, [_vm._v("\n    Click -5\n  ")]), _vm._v(" "), _c('button', {
+    staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.reset
     }
@@ -221,8 +229,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-668b1986_0", {
-    source: ".w3c-vue-sample[data-v-668b1986]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-668b1986]{margin:0 0 1em}",
+  inject("data-v-2745d7a6_0", {
+    source: ".w3c-vue-sample[data-v-2745d7a6]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-2745d7a6]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -230,7 +238,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-668b1986";
+const __vue_scope_id__ = "data-v-2745d7a6";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;

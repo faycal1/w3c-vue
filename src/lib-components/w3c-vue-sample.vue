@@ -15,11 +15,14 @@ export default {
     changedBy() {
       const { message } = this;
       if (!message.action) return 'initialized';
-      //return `${message?.action} ${message.amount ?? ''}`.trim();
-      return 'faycal is fayçal';
+      return this.setMessage();
+      //return 'faycal is fayçal';
     },
   },
   methods: {
+    setMessage(){
+        return `${message?.action} ${message.amount ?? ''}`.trim()
+    },
     increment(arg) {
       const amount = (typeof arg !== 'number') ? 1 : arg;
       this.counter += amount;
@@ -44,19 +47,19 @@ export default {
 <template>
   <div class="w3c-vue-sample w3-panel w3-red">
     <p>The counter was {{ changedBy }} to <b>{{ counter }}</b>.</p>
-    <button @click="increment">
+    <button class="w3-button w3-yellow" @click="increment">
       Click +1
     </button>
-    <button @click="decrement">
+    <button class="w3-button w3-yellow" @click="decrement">
       Click -1
     </button>
-    <button @click="increment(5)">
+    <button class="w3-button w3-yellow" @click="increment(5)">
       Click +5
     </button>
-    <button @click="decrement(5)">
+    <button class="w3-button w3-yellow" @click="decrement(5)">
       Click -5
     </button>
-    <button @click="reset">
+    <button class="w3-button w3-yellow" @click="reset">
       Reset
     </button>
   </div>
