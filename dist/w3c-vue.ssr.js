@@ -69,14 +69,12 @@ function _nonIterableRest() {
     changedBy: function changedBy() {
       var message = this.message;
       if (!message.action) return 'initialized';
-      return this.setMessage(); //return 'faycal is fayçal';
+      return this.setMessage();
     }
   },
   methods: {
     setMessage: function setMessage() {
-      var _ref, _this$message;
-
-      return (_ref = ((_this$message = this.message) === null || _this$message === void 0 ? void 0 : _this$message.action) + ' ' + this.message.amount) !== null && _ref !== void 0 ? _ref : '';
+      return this.message.action;
     },
     increment: function increment(arg) {
       var amount = typeof arg !== 'number' ? 1 : arg;
@@ -222,7 +220,7 @@ var __vue_render__ = function __vue_render__() {
 
   return _c('div', {
     staticClass: "w3c-vue-sample w3-panel w3-red"
-  }, [_vm._ssrNode("<p data-v-544e519c>" + _vm._ssrEscape("The counter was " + _vm._s(_vm.changedBy) + " to ") + "<b data-v-544e519c>" + _vm._ssrEscape(_vm._s(_vm.counter)) + "</b>.</p> <button class=\"w3-button w3-yellow\" data-v-544e519c>\n    Click +1\n  </button> <button class=\"w3-button w3-yellow\" data-v-544e519c>\n    Click -1\n  </button> <button class=\"w3-button w3-yellow\" data-v-544e519c>\n    Click +5\n  </button> <button class=\"w3-button w3-yellow\" data-v-544e519c>\n    Click -5\n  </button> <button class=\"w3-button w3-yellow\" data-v-544e519c>\n    Reset\n  </button>")]);
+  }, [_vm._ssrNode("<p data-v-5ccf136c>" + _vm._ssrEscape("The counter was " + _vm._s(_vm.changedBy) + " to ") + "<b data-v-5ccf136c>" + _vm._ssrEscape(_vm._s(_vm.counter)) + "</b>.</p> <button class=\"w3-button w3-yellow\" data-v-5ccf136c>\n    Click +1\n  </button> <button class=\"w3-button w3-yellow\" data-v-5ccf136c>\n    Click -1\n  </button> <button class=\"w3-button w3-yellow\" data-v-5ccf136c>\n    Click +5\n  </button> <button class=\"w3-button w3-yellow\" data-v-5ccf136c>\n    Click -5\n  </button> <button class=\"w3-button w3-yellow\" data-v-5ccf136c>\n    Reset\n  </button>")]);
 };
 
 var __vue_staticRenderFns__ = [];
@@ -230,8 +228,8 @@ var __vue_staticRenderFns__ = [];
 
 var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-544e519c_0", {
-    source: ".w3c-vue-sample[data-v-544e519c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-544e519c]{margin:0 0 1em}",
+  inject("data-v-5ccf136c_0", {
+    source: ".w3c-vue-sample[data-v-5ccf136c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-5ccf136c]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -239,10 +237,10 @@ var __vue_inject_styles__ = function __vue_inject_styles__(inject) {
 /* scoped */
 
 
-var __vue_scope_id__ = "data-v-544e519c";
+var __vue_scope_id__ = "data-v-5ccf136c";
 /* module identifier */
 
-var __vue_module_identifier__ = "data-v-544e519c";
+var __vue_module_identifier__ = "data-v-5ccf136c";
 /* functional template */
 
 var __vue_is_functional_template__ = false;

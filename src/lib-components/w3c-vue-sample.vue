@@ -16,13 +16,12 @@ export default {
       const { message } = this;
       if (!message.action) return 'initialized';
       return this.setMessage();
-      //return 'faycal is fayçal';
     },
   },
   methods: {
     setMessage(){
       
-        return this.message?.action + ' ' + this.message.amount ?? ''
+        return this.message.action ;
     },
     increment(arg) {
       const amount = (typeof arg !== 'number') ? 1 : arg;

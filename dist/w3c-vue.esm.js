@@ -19,13 +19,13 @@ var script = {
         message
       } = this;
       if (!message.action) return 'initialized';
-      return this.setMessage(); //return 'faycal is fayçal';
+      return this.setMessage();
     }
 
   },
   methods: {
     setMessage() {
-      return this.message?.action + ' ' + this.message.amount ?? '';
+      return this.message.action;
     },
 
     increment(arg) {
@@ -229,8 +229,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-544e519c_0", {
-    source: ".w3c-vue-sample[data-v-544e519c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-544e519c]{margin:0 0 1em}",
+  inject("data-v-5ccf136c_0", {
+    source: ".w3c-vue-sample[data-v-5ccf136c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-5ccf136c]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -238,7 +238,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-544e519c";
+const __vue_scope_id__ = "data-v-5ccf136c";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
