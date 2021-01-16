@@ -18,8 +18,9 @@ var script = {
       const {
         message
       } = this;
-      if (!message.action) return 'initialized';
-      return `${message?.action} ${message.amount ?? ''}`.trim();
+      if (!message.action) return 'initialized'; //return `${message?.action} ${message.amount ?? ''}`.trim();
+
+      return 'faycal is fayçal';
     }
 
   },
@@ -220,8 +221,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-991560ba_0", {
-    source: ".w3c-vue-sample[data-v-991560ba]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-991560ba]{margin:0 0 1em}",
+  inject("data-v-668b1986_0", {
+    source: ".w3c-vue-sample[data-v-668b1986]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-668b1986]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -229,7 +230,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-991560ba";
+const __vue_scope_id__ = "data-v-668b1986";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
