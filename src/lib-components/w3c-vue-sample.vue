@@ -21,8 +21,8 @@ export default {
   },
   methods: {
     setMessage(){
-      const { message } = this;
-        return message?.action + ' ' + message.amount ?? ''
+      
+        return this.message?.action + ' ' + this.message.amount ?? ''
     },
     increment(arg) {
       const amount = (typeof arg !== 'number') ? 1 : arg;

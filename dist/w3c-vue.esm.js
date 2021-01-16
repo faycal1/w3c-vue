@@ -25,10 +25,7 @@ var script = {
   },
   methods: {
     setMessage() {
-      const {
-        message
-      } = this;
-      return message?.action + ' ' + message.amount ?? '';
+      return this.message?.action + ' ' + this.message.amount ?? '';
     },
 
     increment(arg) {
@@ -232,8 +229,8 @@ var __vue_staticRenderFns__ = [];
 
 const __vue_inject_styles__ = function (inject) {
   if (!inject) return;
-  inject("data-v-784cfae8_0", {
-    source: ".w3c-vue-sample[data-v-784cfae8]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-784cfae8]{margin:0 0 1em}",
+  inject("data-v-544e519c_0", {
+    source: ".w3c-vue-sample[data-v-544e519c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-544e519c]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -241,7 +238,7 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-784cfae8";
+const __vue_scope_id__ = "data-v-544e519c";
 /* module identifier */
 
 const __vue_module_identifier__ = undefined;
