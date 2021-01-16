@@ -1,6 +1,6 @@
 {
   "name": "w3c-vue",
-  "version": "1.0.1-2",
+  "version": "1.0.1-3",
   "description": "",
   "main": "dist/w3c-vue.ssr.js",
   "browser": "dist/w3c-vue.esm.js",
