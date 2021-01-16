@@ -15,7 +15,8 @@ export default {
     changedBy() {
       const { message } = this;
       if (!message.action) return 'initialized';
-      return `${message?.action} ${message.amount ?? ''}`.trim();
+      //return `${message?.action} ${message.amount ?? ''}`.trim();
+      return 'faycal is fayçal';
     },
   },
   methods: {
