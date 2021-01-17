@@ -1,0 +1,18 @@
+
+<section class="w-3-c-table">
+  <div class="w3-container">
+  <table class="w3-table w3-striped w3-bordered">
+    <tr>
+      <th v-for="column in columns" >{{column}}</th>      
+    </tr>
+
+    <tr v-for="item in data" >
+      <td>{{item.first_name}}</td>
+      <td>{{item.last_name}}</td>
+      <td>{{item.points}}</td>
+    </tr>
+    
+  </table>
+</div>
+</section>
+

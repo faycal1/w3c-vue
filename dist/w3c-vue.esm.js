@@ -1,54 +1,17 @@
 var script = {
-  name: 'W3cVueSample',
+  name: 'W3cTable',
+  components: {},
+  props: ['columns', 'data'],
 
-  // vue component name
   data() {
-    return {
-      counter: 5,
-      initCounter: 5,
-      message: {
-        action: null,
-        amount: null
-      }
-    };
+    return {};
   },
 
-  computed: {
-    changedBy() {
-      const {
-        message
-      } = this;
-      if (!message.action) return 'initialized';
-      return this.setMessage();
-    }
+  computed: {},
 
-  },
-  methods: {
-    setMessage() {
-      return this.message.action;
-    },
+  mounted() {},
 
-    increment(arg) {
-      const amount = typeof arg !== 'number' ? 1 : arg;
-      this.counter += amount;
-      this.message.action = 'incremented by';
-      this.message.amount = amount;
-    },
-
-    decrement(arg) {
-      const amount = typeof arg !== 'number' ? 1 : arg;
-      this.counter -= amount;
-      this.message.action = 'decremented by';
-      this.message.amount = amount;
-    },
-
-    reset() {
-      this.counter = this.initCounter;
-      this.message.action = 'reset';
-      this.message.amount = null;
-    }
-
-  }
+  methods: {}
 };
 
 function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier /* server only */, shadowMode, createInjector, createInjectorSSR, createInjectorShadow) {
@@ -126,6 +89,132 @@ function normalizeComponent(template, style, script, scopeId, isFunctionalTempla
     return script;
 }
 
+/* script */
+const __vue_script__ = script;
+/* template */
+
+var __vue_render__ = function () {
+  var _vm = this;
+
+  var _h = _vm.$createElement;
+
+  var _c = _vm._self._c || _h;
+
+  return _c('section', {
+    staticClass: "w-3-c-table"
+  }, [_c('div', {
+    staticClass: "w3-container"
+  }, [_c('table', {
+    staticClass: "w3-table w3-striped w3-bordered"
+  }, [_c('tr', _vm._l(_vm.columns, function (column) {
+    return _c('th', [_vm._v(_vm._s(column))]);
+  }), 0), _vm._v(" "), _vm._l(_vm.data, function (item) {
+    return _c('tr', [_c('td', [_vm._v(_vm._s(item.first_name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.last_name))]), _vm._v(" "), _c('td', [_vm._v(_vm._s(item.points))])]);
+  })], 2)])]);
+};
+
+var __vue_staticRenderFns__ = [];
+/* style */
+
+const __vue_inject_styles__ = undefined;
+/* scoped */
+
+const __vue_scope_id__ = "data-v-5e644588";
+/* module identifier */
+
+const __vue_module_identifier__ = undefined;
+/* functional template */
+
+const __vue_is_functional_template__ = false;
+/* style inject */
+
+/* style inject SSR */
+
+/* style inject shadow dom */
+
+const __vue_component__ = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__,
+  staticRenderFns: __vue_staticRenderFns__
+}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, undefined, undefined, undefined);
+
+var script$1 = {
+  name: 'W3cVueSample',
+  // vue component name
+  components: {
+    W3cTable: __vue_component__
+  },
+
+  data() {
+    return {
+      columns: ["First Name", "Last Name", "Points"],
+      data: [{
+        'first_name': 'a',
+        'last_name': 'b',
+        'points': 10
+      }, {
+        'first_name': 'aa',
+        'last_name': 'bb',
+        'points': 20
+      }, {
+        'first_name': 'aaa',
+        'last_name': 'bbb',
+        'points': 30
+      }, {
+        'first_name': 'aaaa',
+        'last_name': 'bbbb',
+        'points': 40
+      }, {
+        'first_name': 'aaaaa',
+        'last_name': 'bbbbb',
+        'points': 50
+      }],
+      counter: 5,
+      initCounter: 5,
+      message: {
+        action: null,
+        amount: null
+      }
+    };
+  },
+
+  computed: {
+    changedBy() {
+      const {
+        message
+      } = this;
+      if (!message.action) return 'initialized';
+      return this.setMessage();
+    }
+
+  },
+  methods: {
+    setMessage() {
+      return this.message.action;
+    },
+
+    increment(arg) {
+      const amount = typeof arg !== 'number' ? 1 : arg;
+      this.counter += amount;
+      this.message.action = 'incremented by';
+      this.message.amount = amount;
+    },
+
+    decrement(arg) {
+      const amount = typeof arg !== 'number' ? 1 : arg;
+      this.counter -= amount;
+      this.message.action = 'decremented by';
+      this.message.amount = amount;
+    },
+
+    reset() {
+      this.counter = this.initCounter;
+      this.message.action = 'reset';
+      this.message.amount = null;
+    }
+
+  }
+};
+
 const isOldIE = typeof navigator !== 'undefined' &&
     /msie [6-9]\\b/.test(navigator.userAgent.toLowerCase());
 function createInjector(context) {
@@ -180,57 +269,64 @@ function addStyle(id, css) {
 }
 
 /* script */
-const __vue_script__ = script;
+const __vue_script__$1 = script$1;
 /* template */
 
-var __vue_render__ = function () {
+var __vue_render__$1 = function () {
   var _vm = this;
 
   var _h = _vm.$createElement;
 
   var _c = _vm._self._c || _h;
 
-  return _c('div', {
+  return _c('div', [_c('div', {
+    staticClass: "table"
+  }, [_c('W3cTable', {
+    attrs: {
+      "columns": _vm.columns,
+      "data": _vm.data
+    }
+  })], 1), _vm._v(" "), _c('div', {
     staticClass: "w3c-vue-sample w3-panel w3-red"
   }, [_c('p', [_vm._v("The counter was " + _vm._s(_vm.changedBy) + " to "), _c('b', [_vm._v(_vm._s(_vm.counter))]), _vm._v(".")]), _vm._v(" "), _c('button', {
     staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.increment
     }
-  }, [_vm._v("\n    Click +1\n  ")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\n      Click +1\n    ")]), _vm._v(" "), _c('button', {
     staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.decrement
     }
-  }, [_vm._v("\n    Click -1\n  ")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\n      Click -1\n    ")]), _vm._v(" "), _c('button', {
     staticClass: "w3-button w3-yellow",
     on: {
       "click": function ($event) {
         return _vm.increment(5);
       }
     }
-  }, [_vm._v("\n    Click +5\n  ")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\n      Click +5\n    ")]), _vm._v(" "), _c('button', {
     staticClass: "w3-button w3-yellow",
     on: {
       "click": function ($event) {
         return _vm.decrement(5);
       }
     }
-  }, [_vm._v("\n    Click -5\n  ")]), _vm._v(" "), _c('button', {
+  }, [_vm._v("\n      Click -5\n    ")]), _vm._v(" "), _c('button', {
     staticClass: "w3-button w3-yellow",
     on: {
       "click": _vm.reset
     }
-  }, [_vm._v("\n    Reset\n  ")])]);
+  }, [_vm._v("\n      Resetto\n    ")])])]);
 };
 
-var __vue_staticRenderFns__ = [];
+var __vue_staticRenderFns__$1 = [];
 /* style */
 
-const __vue_inject_styles__ = function (inject) {
+const __vue_inject_styles__$1 = function (inject) {
   if (!inject) return;
-  inject("data-v-5ccf136c_0", {
-    source: ".w3c-vue-sample[data-v-5ccf136c]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-5ccf136c]{margin:0 0 1em}",
+  inject("data-v-66c197c1_0", {
+    source: ".w3c-vue-sample[data-v-66c197c1]{display:block;width:400px;margin:25px auto;border:1px solid #ccc;background:#eaeaea;text-align:center;padding:25px}.w3c-vue-sample p[data-v-66c197c1]{margin:0 0 1em}",
     map: undefined,
     media: undefined
   });
@@ -238,27 +334,28 @@ const __vue_inject_styles__ = function (inject) {
 /* scoped */
 
 
-const __vue_scope_id__ = "data-v-5ccf136c";
+const __vue_scope_id__$1 = "data-v-66c197c1";
 /* module identifier */
 
-const __vue_module_identifier__ = undefined;
+const __vue_module_identifier__$1 = undefined;
 /* functional template */
 
-const __vue_is_functional_template__ = false;
+const __vue_is_functional_template__$1 = false;
 /* style inject SSR */
 
 /* style inject shadow dom */
 
-const __vue_component__ = /*#__PURE__*/normalizeComponent({
-  render: __vue_render__,
-  staticRenderFns: __vue_staticRenderFns__
-}, __vue_inject_styles__, __vue_script__, __vue_scope_id__, __vue_is_functional_template__, __vue_module_identifier__, false, createInjector, undefined, undefined);
+const __vue_component__$1 = /*#__PURE__*/normalizeComponent({
+  render: __vue_render__$1,
+  staticRenderFns: __vue_staticRenderFns__$1
+}, __vue_inject_styles__$1, __vue_script__$1, __vue_scope_id__$1, __vue_is_functional_template__$1, __vue_module_identifier__$1, false, createInjector, undefined, undefined);
 
 /* eslint-disable import/prefer-default-export */
 
 var components = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  W3cVueSample: __vue_component__
+  W3cVueSample: __vue_component__$1,
+  W3cTable: __vue_component__
 });
 
 // Import vue components
@@ -277,4 +374,4 @@ const plugin = {
 }; // To auto-install on non-es builds, when vue is found
 
 export default plugin;
-export { __vue_component__ as W3cVueSample };
+export { __vue_component__ as W3cTable, __vue_component__$1 as W3cVueSample };
