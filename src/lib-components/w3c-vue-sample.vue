@@ -1,7 +1,7 @@
 <script>
 import W3cButton from './button/index.vue'
 import W3cIcon from './icon/index.vue'
-import W3c  from './input/index.vue'
+import W3cInput  from './w3c-input/index.vue'
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
@@ -10,7 +10,8 @@ export default {
   name: 'W3cVueSample', // vue component name
   components:{
     W3cIcon,
-    W3cButton
+    W3cButton,
+    W3cInput
   },
   data() {
     return {
@@ -36,6 +37,7 @@ export default {
 
 <template>
 <div>
+  <w3c-input ></w3c-input>
    <w3c-button  class="w3-black"   label="Primary"  ></w3c-button>
    <w3c-button  class="w3-black"   label="Primary"  ></w3c-button>
    <w3c-button  class="w3-yellow"  label="yellow"  ></w3c-button>

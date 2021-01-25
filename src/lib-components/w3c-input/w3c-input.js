@@ -1,6 +1,6 @@
 
 export default {
-  name: 'w-3-c-input',
+  name: 'W3cInput',
   components: {},
   props: [],
   data () {
