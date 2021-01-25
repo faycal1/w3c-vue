@@ -35,11 +35,14 @@ export default {
 
 <template>
 <div>
-  <w3c-button  class="w3-black"   label="Primary"  ></w3c-button>
-   <w3c-button class="w3-black"   label="Primary"  ></w3c-button>
-   <w3c-button class="w3-yellow"  label="yellow"  ></w3c-button>
-   <w3c-button class="w3-red"     label="red"  ></w3c-button>
-  <w3c-button @click="setLoading"  class="w3-red"  icon-left="fas fa-spinner" :loading="isLoading" ></w3c-button>
+   <w3c-button  class="w3-black"   label="Primary"  ></w3c-button>
+   <w3c-button  class="w3-black"   label="Primary"  ></w3c-button>
+   <w3c-button  class="w3-yellow"  label="yellow"  ></w3c-button>
+   <w3c-button  class="w3-red"     label="red"  ></w3c-button>
+   <w3c-button  @click="setLoading"  
+                class="w3-red"  
+                icon-left="fas fa-spinner" 
+                :loading="isLoading" ></w3c-button>
    <hr>
 
 </div>

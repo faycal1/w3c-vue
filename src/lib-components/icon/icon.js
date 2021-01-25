@@ -15,8 +15,8 @@ export default {
     loading:Boolean
   },
   mounted () {
-    //this.loading ? this.customClass.concat(' fa-spin') : null;
-    console.log(this.loading, this.customClass);
+    // this.loading ? this.customClass = ' fa-spin' : null;
+    console.log(this.loading, this.customClass , 'On The Icon');
   },
   computed: {
     iconConfig() {
