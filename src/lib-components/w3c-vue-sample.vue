@@ -1,6 +1,7 @@
 <script>
 import W3cButton from './button/index.vue'
 import W3cIcon from './icon/index.vue'
+import W3c  from './input/index.vue'
 
 import '@fortawesome/fontawesome-free/css/all.css'
 import '@fortawesome/fontawesome-free/js/all.js'
@@ -44,6 +45,7 @@ export default {
                 icon-left="fas fa-spinner" 
                 :loading="isLoading" ></w3c-button>
    <hr>
+
 
 </div>
 </template>
