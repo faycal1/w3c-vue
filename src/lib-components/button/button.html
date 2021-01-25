@@ -1,0 +1,42 @@
+<component
+        :is="computedTag"
+        class="w3-button"
+        v-bind="$attrs"
+        :type="nativeType"
+        :class="[size, type, {
+            'is-rounded': rounded,
+            'is-loading': loading,
+            'is-outlined': outlined,
+            'is-fullwidth': expanded,
+            'is-inverted': inverted,
+            'is-focused': focused,
+            'is-active': active,
+            'is-hovered': hovered,
+            'is-selected': selected
+        }]"
+        v-on="$listeners"
+>
+    <w3c-icon
+            v-if="iconLeft"
+            :pack="iconPack"
+            :icon="iconLeft"
+            :size="iconSize"
+            :loading="loading"
+    />
+    <span v-if="label">
+        &nbsp;
+        {{ label }}
+        &nbsp;
+    </span>
+    <span v-else-if="$slots.default">
+            <slot />
+        </span>
+    <w3c-icon
+            v-if="iconRight"
+            :pack="iconPack"
+            :icon="iconRight"
+            :size="iconSize"
+            :loading="loading"
+    />
+</component>
+
